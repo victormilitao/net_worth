@@ -40,3 +40,4 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'net-smtp', require: false
+gem 'jbuilder', '~> 2.11.5'
