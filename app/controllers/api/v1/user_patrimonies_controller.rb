@@ -2,8 +2,8 @@ module Api
   module V1
     class UserPatrimoniesController < ApplicationController
       def show
-        user_patrimonies = UserPatrimony.where(user_id: params[:id])
-        render json: { data: user_patrimonies }, status: :ok
+        @user_patrimonies = UserPatrimony.includes(:user, :stock).where(user_id: params[:id])
+        render :show, status: :ok
       end
     end
   end
